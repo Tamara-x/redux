@@ -1,8 +1,10 @@
-import {combineReducers} from 'redux';
-import userReducer from './users';
-
-const allReducers = combineReducers({
-    persons: userReducer
-});
-
-export default allReducers;
+// import {combineReducers} from 'redux';
+// import Persons from './users';
+// import PersonsFilter from './personReducer';
+//
+// const allReducers = combineReducers({
+//     persons: Persons,
+//     PersonsFilter
+// });
+//
+// export default allReducers;

@@ -1,18 +1,33 @@
+const personsData = {
+    persons: [
+        {
+            id: 1,
+            name: "Tamara",
+            age: "23"
+        },
+        {
+            id: 2,
+            name: "Danique",
+            age: "18"
+        }
+    ]
+};
 
-const personReducer = (state = persons, action) => {
+
+const PersonsFilter = (state= personsData, action) => {
     switch(action.type) {
         case 'ADD_PERSON':
             return state.concat([action.data]);
         case 'DELETE_PERSON':
-            return console.log(state);
+            let person = state.persons.filter(person=> {
+                return person.id !== action.id});
+            return {...state, persons: person};
+
         case 'SELECT_PERSON':
-            return action.payload;
+            return console.log("hee");
         default:
             return state;
     }
 };
 
-export default personReducer;
-
-
-// state.filter((person)=>person.id !== person.id)
+export default PersonsFilter;

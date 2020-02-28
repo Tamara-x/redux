@@ -1,5 +1,7 @@
+
+
 export const selectPerson = (person) => {
-    console.log("you clicked edit person:", person.id);
+    console.log("you clicked select person:", person.id);
     return {
         type: "SELECT_PERSON",
         payload: person
@@ -26,7 +28,6 @@ export const deletePerson = (person) => {
     console.log("you clicked delete:", person.id);
     return {
         type: "DELETE_PERSON",
-        id: person.id,
-        payload: person
+        id: person
     }
 };
