@@ -1,31 +1,35 @@
-
-
-export const selectPerson = (person) => {
-    console.log("you clicked select person:", person.id);
-    return {
-        type: "SELECT_PERSON",
-        payload: person
-    }
-};
-
-export const editedPerson = (person) => {
-    console.log("you clicked edit person:", person.id);
-    return {
-        type: "EDIT_PERSON",
-        payload: person
-    }
-};
-
 export const addPerson = (person) => {
-    console.log("you clicked add person");
+    console.log(person);
     return {
         type: "ADD_PERSON",
-        payload: person
+        data: person
+    }
+};
+export const openForm = (person) => ({
+    type: "OPEN_FORM",
+    data: person
+});
+
+export const closeEdit = (person) => ({
+    type: "CLOSE_EDIT",
+    data: person
+});
+
+export const editPerson = (person) => {
+  return {
+      type: "UPDATE_PERSON",
+      data: person
+  }
+};
+
+export const openEdit = (person) => {
+    return {
+        type: "OPEN_EDIT_PERSON",
+        data: person
     }
 };
 
 export const deletePerson = (person) => {
-    console.log("you clicked delete:", person.id);
     return {
         type: "DELETE_PERSON",
         id: person

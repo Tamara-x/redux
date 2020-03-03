@@ -1,13 +1,16 @@
 import React, {Component} from 'react';
 import Table from './table';
-import PersonDetails from './personDetails';
+import AddPerson from './ModalPerson';
+import EditPerson from './EditComponent';
 
 class Home extends Component {
     render() {
         return (
             <div className="App">
                 <Table />
-                <PersonDetails />
+                <AddPerson />
+                <br />
+                <EditPerson />
             </div>
         );
     }
